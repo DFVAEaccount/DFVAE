@@ -19,5 +19,6 @@ The first is four legal datasets. The second represents a scale changing mode, w
 Before running our project, there's still some modules our readers can adjust by themselves.  
 (1) Datasets. Readers must download at least one dataset of the four celebA, GENKI, UTKface and dSprites. There are some examples with incomplete annotations in GENKI and UTKface that we skip when making dataloaders.  
 (2) The pretrain module. The module is default noted because pretraining models may performs too well to reappear in federated scenarios.   
-(3) VAE network structure. The module is default set as fully connected. Readers can also switch to a CNN version that does not interfere with the generating results too much.  
-(4) Plotting. Our code provides no plotting and visual modules due to a potential conflict of visual packages. Readers can add this module by their own for recurrent results in this paper.  
+(3) The predictor. We employ a probability directly that calculated according to our changing mode. Readers will have access to our predictor in file predictor.py if they want to set different changing mode that need to be fitted by a MLP model.  
+(4) VAE network structure. The module is default set as fully connected. Readers can also switch to a CNN version that does not interfere with the generating results too much.  
+(5) Plotting. Our code provides no plotting and visual modules due to a potential conflict of visual packages. Readers can add this module by their own for recurrent results in this paper.  
